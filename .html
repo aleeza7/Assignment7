@@ -1,4 +1,59 @@
 <html> 
+<head> 
+<script>
+  var rollNumber1 = [1, 2, 3, 4, 5, 6];
+  var rollNumber2 = [1, 2, 3, 4, 5, 6];
+  var roll1 = rollNumber[Math.floor(Math.random() * rollNumber.length)];
+  var roll2 =  rollNumber2[Math.floor(Math.random() * rollNumber2.length)];
+  var finalRoll = 0;
+  var randomRoll = 0;
+
+  function pictureOne()
+    { 
+      
+function rollDice() 
+{
+                finalRoll = roll1 + roll2;
+                if (roll1 == 1) {
+                document.getElementById("rollImage1").src = "dice1.jpg";
+                }
+            
+                 if (roll1 == 2) {
+                document.getElementById("rollImage1").src = "dice2.jpg";
+                }
+
+    if (roll1 == 3) {
+                document.getElementById("rollImage1").src = "dice3.jpg";
+                }
+
+    if (roll1 == 3) {
+                document.getElementById("rollImage1").src = "dice3.jpg";
+                }
+    if (roll1 == 4) {
+                document.getElementById("rollImage1").src = "dice4.jpg";
+                }
+
+    if (roll1 == 5) {
+                document.getElementById("rollImage1").src = "dice5.jpg";
+                }
+
+    if (roll1 == 6) {
+                document.getElementById("rollImage1").src = "dice6.jpg";
+                }
+  
+                
+                if(finalRoll>0 && finalRoll <= 12) 
+                {
+                document.getElementById("countDisplay").innerHTML =  document.getElementById("displayRollNumber").innerHTML = "You rolled " + finalRoll
+                }
+}
+
+      
+</script>
 
 
+</head>
+<body> 
+
+</body>
 </html>
