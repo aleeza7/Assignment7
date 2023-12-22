@@ -102,7 +102,7 @@ function rollDice()
                 randomRoll2 = roll2;
                 finalRoll = randomRoll2 + randomRoll2;
                
-                ifcommand();
+                ifCommand();
   
                 if(finalRoll>0 && finalRoll <= 12) 
                 {
@@ -127,6 +127,24 @@ function rollDice()
                 document.getElementById("counterDisplay").innerHTML = "You entered an invalid index."
             }
     }
+    
+
+    var currentLargestNumber = 0
+      var largestNumberArray = [];
+    function frequency()
+        {
+        for(let i =0; i<myNumberArray.length; i++)
+            // change arrayinput3
+            largestNumberArray.push(document.getElementById("arrayInput3").value);
+
+            if (currentLargestNumber>i) {
+currentLargestNumber = i; 
+                document.getElementById("largestFrequency").innerHTML = currentLargestNumber; 
+                
+             
+    }
+            
+        }
 
 
   
@@ -135,25 +153,25 @@ function rollDice()
 
 </head>
 <body> 
-  <div class = "picture1"> 
+  <div> 
   <img id = "rollImage1" src = "dice1.jpg" height = 100px width = 100px> 
     
     
   </div>
 
-  <div class = "picture2"> 
+  <div> 
    <img id = "rollImage2" src = "dice1.jpg" height = 100px width = 100px> 
   
   </div>
 
-  <div class = "roll">
+  <div class>
   <button id = "rollNow" onclick = rollDice()> Roll Dice
   </button>
     <p id = "rollRoll"> You've Rolled a 2
     </p>
   </div>
   
-    <div class = "hmt">
+    <div>
       Find Out How Many Times You've Rolled:
       <input id = "howManyTimesInput"> 
       <button onclick = howMany()> 
@@ -163,10 +181,16 @@ function rollDice()
       </p>
     </div>
 
-  <div class = "amountOfRolls">
+  <div>
     <p id = "amountOfRollsId"> You've Rolled a Total of 0 Times!
     </p>
   </div>
+
+
+    <div>
+<p id = "largestFrequency"> 
+    Find the largest number rolled so far
+    </div>
   
 </body>
 </html>
