@@ -23,9 +23,22 @@
   var randomRoll1 = 0;
   var randomRoll2 = 0;
 
+  var finalRollOne = 0;
+    var finalRollTwo = 0;
+    var finalRollThree = 0;
+    var finalRollFour = 0;
+    var finalRollFive = 0;
+    var finalRollSix = 0;
+    var finalRollSeven = 0;
+    var finalRollEight = 0;
+    var finalRollNine = 0;
+    var finalRollTen = 0;
+    var finalRollEleven = 0;
+    var finalRollTwelve = 0;
+
   var howManyArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     
-  var numberOfRolls = 0;
+  var numberofRolls = 0;
   function ifCommand1() 
     { 
       randomRoll1 = roll1;
@@ -97,6 +110,10 @@
       
          
                 }
+                randomRoll1 = roll1;
+                randomRoll2 = roll2;
+                finalRoll = randomRoll1 + randomRoll2;
+
           if(finalRoll>0 && finalRoll <= 12) 
                 {
              document.getElementById("rollRoll").innerHTML = "You've rolled a " + finalRoll
@@ -105,9 +122,7 @@
   numberofRolls++;
   document.getElementById("amountOfRollsId").innerHTML = "You've Rolled a Total of " + numberofRolls + " times!" 
         
-                randomRoll1 = roll1;
-                randomRoll2 = roll2;
-                finalRoll = randomRoll1 + randomRoll2;
+              
     if (finalRoll == 1) {
         finalRollOne++; 
     } 
@@ -147,23 +162,9 @@
       
        
   }
+
     
   
-  var finalRollOne = 0;
-    var finalRollTwo = 0;
-    var finalRollThree = 0;
-    var finalRollFour = 0;
-    var finalRollFive = 0;
-    var finalRollSix = 0;
-    var finalRollSeven = 0;
-    var finalRollEight = 0;
-    var finalRollNine = 0;
-    var finalRollTen = 0;
-    var finalRollEleven = 0;
-    var finalRollTwelve = 0;
-    
-    
-
 
   var hmtInput = 0;
   function howMany() 
@@ -173,6 +174,7 @@
       
                                                                
       if(hmtInput == 1) {
+
           document.getElementById("counterDisplay").innerHTML  = "You Rolled " + hmtInput + " a number of " + finalRollOne + " times."; 
     } 
                if(hmtInput == 2) {
@@ -210,7 +212,7 @@
     } 
 
           
-            else {
+            else if (hmtInput>12) {
                 document.getElementById("counterDisplay").innerHTML = "You entered an invalid index."
             }
     }
@@ -224,7 +226,7 @@
   {
         for(let i =0; i<howManyArray.length; i++)
             {
-            largestNumberArray.push(document.getElementById("finalRoll")
+            largestNumberArray.push(document.getElementById("finalRoll")) 
 
     
             if (currentLargestNumber>i) {
@@ -234,10 +236,10 @@ currentLargestNumber = i;
              
     }
 
-                document.getElementById("largestFrequency").innerHTML = "The largest number rolled so far is" + currentLargestNumber;                                           
+                document.getElementById("largestFrequency").innerHTML = "The largest number rolled so far is " + currentLargestNumber;                                           
         }
       }
-    }
+    
       
 
 
@@ -259,7 +261,7 @@ currentLargestNumber = i;
   </div>
 
   <div class>
-  <button id = "rollNow" onclick = ifCommand1()> Roll Dice
+  <button id = "rollNow" onclick = "ifCommand1()"> Roll Dice
   </button>
     <p id = "rollRoll"> You've Rolled a 2
     </p>
@@ -268,7 +270,7 @@ currentLargestNumber = i;
     <div>
       Find Out How Many Times You've Rolled:
       <input id = "howManyTimesInput"> 
-      <button onclick = howMany()> 
+      <button onclick = "howMany()"> 
       Submit Number 
       </button>
       <p id = "counterDisplay">  You have rolled...
@@ -284,7 +286,7 @@ currentLargestNumber = i;
     <div>
 <p id = "largestFrequency"> 
     Find the largest number rolled so far 
-<button onclick = frequency()> Click Here </button>
+<button onclick = "frequency()"> Click Here </button>
     </div>
   
 </body>
