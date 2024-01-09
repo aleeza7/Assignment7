@@ -156,23 +156,19 @@
     
     
 
-    var currentLargestNumber = 0;
+    var maxValue = 2;
     
-    function frequency()
-  {
-        for(let i =0; i<howManyArray.length; i++) 
-            {
-          
+    function frequency() {
   
-            if (currentLargestNumber>i) {
-currentLargestNumber = i; 
-                
-             
-    }
+for(let i=2; i<=12; i++) {
+If (howManyArray[i]> howManyArray[maxValue] ) {
+maxValue = i; 
 
-                document.getElementById("largestFrequency").innerHTML = "The largest number rolled so far is " + currentLargestNumber;                                           
+                                                         
         }
+  document.getElementById("largestFrequency").innerHTML = "The largest number rolled so far is " + maxValue
       }
+    }
     
       
 
