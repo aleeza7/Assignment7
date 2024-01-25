@@ -42,8 +42,8 @@
   function ifCommand1() 
 
     { 
-       roll1 = rollNumberArray[Math.floor(Math.random() * 6) + 1];
-   roll2 = rollNumberArray[Math.floor(Math.random() * 6) + 1];
+       roll1 = rollNumberArray[Math.floor(Math.random() * 6)];
+   roll2 = rollNumberArray[Math.floor(Math.random() * 6)];
       randomRoll1 = roll1;
                 randomRoll2 = roll2;
          
@@ -167,7 +167,7 @@ maxValue = i;
 
                                                          
         }
-  document.getElementById("largestFrequency").innerHTML = "The largest number rolled so far is " + maxValue
+  document.getElementById("largestFrequency").innerHTML = "The most frequent number rolled so far is " + maxValue
       }
     }
     
